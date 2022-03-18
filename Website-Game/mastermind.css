@@ -1,0 +1,247 @@
+/*
+======================
+Reset
+======================
+*/
+:root {
+    --primaryColor: #f1f1f1;
+    --black: #222;
+    --black2: #555;
+    --black3: #252525;
+    --black4: #000;
+    --black5: #212529;
+    --orange: #eb0028;
+    --white: #fff;
+    --grey: #959595;
+    --grey2: #666;
+    --grey3: #ccc;
+    --secondaryColor: #2b1f4d;
+    --yellow: #ffcc00;
+    --green: #59b210;
+    --blue: rgb(56, 10, 223);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;         
+    scroll-behavior: smooth;
+    background-color: lightblue;
+  }
+  body,
+  input {
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: "Archivo", 'Calibri';
+    color: var(--black);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  h3,
+  h4 {
+    font-weight: 500;
+  }
+
+/*
+======================
+Header
+======================
+*/
+
+.header {
+    position: relative;
+  }
+  
+  .container {
+    max-width: 117rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+  } 
+
+/*
+======================
+Navigationbar
+======================
+*/
+
+.nav {
+    position: relative;
+    height: 7rem;
+    width: auto;
+    background-color: lightblue;
+    padding: 1.6rem;
+    font-weight: 700;
+}
+
+.nav_title {
+    font-size: 2.5rem;
+    color: black;
+} 
+
+/*
+======================
+Game    
+======================
+*/  
+
+.contentbox {
+    flex: 0 1 auto;   
+    background-color: lightblue;
+    width: auto;   
+    height: 857px;
+} 
+
+.contentbox_lettercontainer_left {
+
+  width: 65px;
+  height: 65px;
+
+  background-color: white;
+  box-shadow: 0 0 7px 0 rgba(0,0,0,.5);
+  font-size: 6rem;
+  font-family: "Archivo", 'Calibri';
+  font-weight: 400;
+  text-align: center; 
+  border-radius: 10px;
+  z-index: 1;
+
+  position: relative;
+  top: 3%;
+  left: 30%;
+}
+
+.contentbox_lettercontainer_right {
+  width: 65px;
+  height: 65px;
+
+  background-color: red;
+  box-shadow: 0 0 7px 0 rgba(0,0,0,.5);
+  font-size: 6rem;
+  font-family: "Archivo", 'Calibri';
+  font-weight: 400;
+  text-align: center; 
+  border-radius: 10px;
+
+  position: relative; 
+  top: -148%;
+  left: 56%;
+}
+
+.playerbox_wordinput{ 
+  font-size: 6rem;  
+  background-color: lightblue;
+  font-family: "Archivo", 'Calibri';
+  text-align: center;
+  border-width: 0px;
+  letter-spacing: 40px;
+  outline: none !important;
+  width: 400px;
+  z-index: 0;
+
+  position: relative;
+  top: -74%;
+  left: 30%;
+}
+
+
+.playerbox_wordinput::-webkit-input-placeholder { 
+  background-color: lightblue;
+  outline: none !important;
+  box-shadow: 0 0 10px #719ECE;
+}
+
+.winningscreen{
+  font-size: 12rem;
+  color: green;
+  position: relative;
+  left: 30%;
+  top: 30%;
+}
+
+.loosingscreen {
+  font-size: 12rem;
+  color: red;
+  position: relative;
+  left: 34%;
+  top: 30%;
+}
+
+.winningscreen_subscreen {
+  font-size: 3rem;
+  letter-spacing: 10px;
+  position: relative;
+  left: 7%;
+  top: 37%; 
+}
+.winningscreen_subscreen2 {
+  font-size: 3rem;
+  letter-spacing: 50px;
+  position: relative;
+  left: -15%;
+  top: 44%;
+}
+
+.error_msg {
+  font-size: 3rem;
+  font-family: "Archivo", 'Calibri';
+  color: red;
+  position: relative;
+  left: 2%;
+  top: 5%;
+}
+
+/*
+Button after finnishing a game
+*/
+
+.playagainbutton {
+  background-color: lightcyan;
+  font-size: 3rem;
+  border-radius: 20px;
+
+  width: 320px;
+
+  position: relative;
+  left: 35%;
+  top: 49%;
+}
+
+.playagainbutton:hover {
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  cursor: pointer;
+}
+
+.menubutton {
+  background-color: lightcyan;
+  font-size: 3rem;
+  border-radius: 20px;
+
+  width: 320px;
+
+  position: relative;
+  left: -37%;
+  top: 63%;
+}
+
+.menubutton:hover {
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  cursor: pointer;
+}

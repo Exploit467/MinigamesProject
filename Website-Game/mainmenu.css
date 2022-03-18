@@ -1,0 +1,106 @@
+/*
+======================
+Reset
+======================
+*/
+:root {
+    --primaryColor: #f1f1f1;
+    --black: #222;
+    --black2: #555;
+    --black3: #252525;
+    --black4: #000;
+    --black5: #212529;
+    --orange: #eb0028;
+    --white: #fff;
+    --grey: #959595;
+    --grey2: #666;
+    --grey3: #ccc;
+    --secondaryColor: #2b1f4d;
+    --yellow: #ffcc00;
+    --green: #59b210;
+    --blue: rgb(56, 10, 223);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;         
+    scroll-behavior: smooth;
+    background-color: lightblue;
+  }
+  body,
+  input {
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: "Archivo", 'Calibri';
+    color: var(--black);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  h3,
+  h4 {
+    font-weight: 500;
+  }
+
+/*
+======================
+Header
+======================
+*/
+
+.header {
+    position: relative;
+  }
+  
+  .container {
+    max-width: 117rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+  } 
+
+/*
+======================
+Navigationbar
+======================
+*/
+
+.nav {
+    position: relative;
+    height: 7rem;
+    width: auto;
+    background-color: lightblue;
+    padding: 1.6rem;
+    font-weight: 700;
+}
+
+.nav_title {
+    font-size: 2.5rem;
+    color: black;
+} 
+
+.nav_timer {
+    font-size: 6rem;
+    color: black;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    position: relative;
+    left: 48% ;
+    top: -35px;
+}

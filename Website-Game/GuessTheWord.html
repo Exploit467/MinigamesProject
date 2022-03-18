@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/logo/logo_small_icon_only.png" type="image/x-icon" />
+
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="GuessTheWord.css" />
+
+    <title>Minigames - GuessTheWord</title>
+
+    <script>
+    /*
+        contentbox_lettercontainer   
+    */
+    window.addEventListener("DOMContentLoaded", async function () {
+        const lettercontainer = document.getElementById("value_letter");
+        const timercontainer = document.getElementById("value_timer");
+        starttimer();
+
+        function starttimer(){
+            timercontainer.innerHTML = 5;
+            setTimeout(function(){
+            timercontainer.innerHTML = 4; 
+            },1000);
+            setTimeout(function(){
+            timercontainer.innerHTML = 3; 
+            },2000);
+            setTimeout(function(){
+            timercontainer.innerHTML = 2; 
+            },3000);
+            setTimeout(function(){
+            timercontainer.innerHTML = 1; 
+            },4000);
+            setTimeout(function(){
+            timercontainer.innerHTML = 0;
+            displayletter(); 
+            },5000);
+        }
+        
+        function displayletter(){
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * max);
+            }
+            var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+            if (lettercontainer) {
+                var i = getRandomInt(26)
+                lettercontainer.innerHTML = letters[i];
+                roundtimer(letters[i]);
+            }
+        }
+
+
+        function correctword(){
+
+        }
+
+        function roundtimer(letter){
+            timercontainer.innerHTML = 15; 
+            a=setTimeout(function(){timercontainer.innerHTML = 14;},1000);
+            b=setTimeout(function(){timercontainer.innerHTML = 13;},2000);
+            c=setTimeout(function(){timercontainer.innerHTML = 12;},3000);
+            d=setTimeout(function(){timercontainer.innerHTML = 11;},4000);
+            e=setTimeout(function(){timercontainer.innerHTML = 10;},5000);
+            f=setTimeout(function(){timercontainer.innerHTML = 9;},6000);
+            g=setTimeout(function(){timercontainer.innerHTML = 8;},7000);
+            h=setTimeout(function(){timercontainer.innerHTML = 7;},8000);
+            i=setTimeout(function(){timercontainer.innerHTML = 6;},9000);
+            j=setTimeout(function(){timercontainer.innerHTML = 5;},10000);
+            k=setTimeout(function(){timercontainer.innerHTML = 4;},11000);
+            l=setTimeout(function(){timercontainer.innerHTML = 3;},12000);
+            m=setTimeout(function(){timercontainer.innerHTML = 2;},13000);
+            n=setTimeout(function(){timercontainer.innerHTML = 1;},14000);
+            o=setTimeout(function(){timercontainer.innerHTML = 0;},15000);
+
+            document.getElementById("wordinput").addEventListener("keyup", function(event) {
+                if (event.keyCode === 13) {
+                    var value = document.getElementById("wordinput").value;
+                    var firstletter = value.split("")
+                    if(value != ""){
+                        if(letter == firstletter[0]){
+                            correctword();
+                            document.getElementById("correctword").innerHTML = value;
+                            document.getElementById("wrongword").innerHTML = "";
+                            document.getElementById("wordinput").value = "";
+                            clearTimeout(a);
+                            clearTimeout(b);
+                            clearTimeout(c);
+                            clearTimeout(d);
+                            clearTimeout(e);
+                            clearTimeout(f);
+                            clearTimeout(g);
+                            clearTimeout(h);
+                            clearTimeout(i);
+                            clearTimeout(j);
+                            clearTimeout(k);
+                            clearTimeout(l);
+                            clearTimeout(m);
+                            clearTimeout(n);
+                            clearTimeout(o);
+                            roundtimer();
+
+                        }
+                        else if(letter.toLowerCase() == firstletter[0]){
+                            correctword();
+                            document.getElementById("correctword").innerHTML = value;
+                            document.getElementById("wrongword").innerHTML = "";
+                            document.getElementById("wordinput").value = "";
+                            clearTimeout(a);
+                            clearTimeout(b);
+                            clearTimeout(c);
+                            clearTimeout(d);
+                            clearTimeout(e);
+                            clearTimeout(f);
+                            clearTimeout(g);
+                            clearTimeout(h);
+                            clearTimeout(i);
+                            clearTimeout(j);
+                            clearTimeout(k);
+                            clearTimeout(l);
+                            clearTimeout(m);
+                            clearTimeout(n);
+                            clearTimeout(o);
+                            roundtimer();
+                        }
+                        else{
+                            document.getElementById("correctword").innerHTML = "";
+                            document.getElementById("wrongword").innerHTML = value;
+                            document.getElementById("wordinput").value = "";
+                        }
+                    }
+                    return false;
+                }
+            });
+        }
+    })
+    </script>
+</head> 
+<body> 
+    <div class="nav">
+        <div class="nav_title">
+            <a>Minigames - GuessTheWord</a>
+        </div>
+        <div class="nav_timer">
+            <a id="value_timer"></a>   
+        </div>
+    </div>
+    <div class="contentbox">
+        <div class="contentbox_lettercontainer"><div id="value_letter"></div></div>
+        <div class="playerbox_wrong_words" id="wrongword"></div>
+        <div class="playerbox_correct_words" id="correctword"></div>
+        <div class="playerbox_wordinput">
+        <input class="playerbox_wordinput" ::-webkit-input-placeholder id="wordinput" type="text" autocomplete="off" placeholder="___________" maxlength="32"></input>
+        </div>
+        <div class="playerbox_playername">
+            <a>Playername</a>
+        </div>
+    </div>
+</body>
+</html>

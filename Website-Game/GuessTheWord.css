@@ -1,0 +1,196 @@
+/*
+======================
+Reset
+======================
+*/
+:root {
+    --primaryColor: #f1f1f1;
+    --black: #222;
+    --black2: #555;
+    --black3: #252525;
+    --black4: #000;
+    --black5: #212529;
+    --orange: #eb0028;
+    --white: #fff;
+    --grey: #959595;
+    --grey2: #666;
+    --grey3: #ccc;
+    --secondaryColor: #2b1f4d;
+    --yellow: #ffcc00;
+    --green: #59b210;
+    --blue: rgb(56, 10, 223);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;         
+    scroll-behavior: smooth;
+    background-color: lightblue;
+  }
+  body,
+  input {
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: "Archivo", 'Calibri';
+    color: var(--black);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  h3,
+  h4 {
+    font-weight: 500;
+  }
+
+/*
+======================
+Header
+======================
+*/
+
+.header {
+    position: relative;
+  }
+  
+  .container {
+    max-width: 117rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+  } 
+
+/*
+======================
+Navigationbar
+======================
+*/
+
+.nav {
+    position: relative;
+    height: 7rem;
+    width: auto;
+    background-color: lightblue;
+    padding: 1.6rem;
+    font-weight: 700;
+}
+
+.nav_title {
+    font-size: 2.5rem;
+    color: black;
+} 
+
+.nav_timer {
+    font-size: 6rem;
+    color: black;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    position: relative;
+    left: 48% ;
+    top: -35px;
+}
+
+/*
+======================
+Game    
+======================
+*/  
+.contentbox {
+    flex: 0 1 auto;   
+    background-color: lightblue;
+    width: auto;   
+    height: 857px;
+} 
+
+.contentbox_lettercontainer {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+
+    margin:auto;
+    background-color: lightgray;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.5);
+    font-size: 9rem;
+    font-family: "Archivo", 'Calibri';
+    font-weight: 400;
+    justify-content: center;
+    text-align: center; 
+    border-radius: 30px;
+
+    position: relative; 
+    top: 40%;
+}
+
+.playerbox_playername{
+    font-size: 3rem;
+    background-color: lightblue;
+    font-family: "Archivo", 'Calibri';
+    font-weight: 400;
+    text-align: center;
+    
+    position: relative;
+    top: 70%;
+}
+
+.playerbox_wordinput{ 
+    font-size: 3rem;  
+    background-color: lightblue;
+    font-family: "Archivo", 'Calibri';
+    font-weight: 400;
+    text-align: center;
+    border-width: 0;
+    outline: none !important;
+
+    position: relative;
+    top: 65%;
+}
+
+.playerbox_wordinput::-webkit-input-placeholder { 
+    background-color: lightblue;
+    outline: none !important;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+.playerbox_wrong_words {
+  font-size: 3rem;  
+    background-color: lightblue;
+    color: red;
+    font-family: "Archivo", 'Calibri';
+    font-weight: 400;
+    text-align: center;
+    border-width: 0;
+    outline: none !important;
+
+    position: relative;
+    top: 60%;
+}
+
+.playerbox_correct_words {
+  font-size: 3rem;  
+    background-color: lightblue;
+    color: green;
+    font-family: "Archivo", 'Calibri';
+    font-weight: 400;
+    text-align: center;
+    border-width: 0;
+    outline: none !important;
+
+    position: relative;
+    top: 60%;
+}
