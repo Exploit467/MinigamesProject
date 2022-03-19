@@ -15,7 +15,67 @@
     <title>Minigames</title>
 
     <script>
+        window.addEventListener("DOMContentLoaded", async function(){
+            mainmenu()
+        });
+
+        //Subscreens
+        //Main Menu
+        function mainmenu(){
+            document.querySelector(".contentbox").innerHTML =
+                `
+                <h1>Name of the Website</h1>
+                <button onclick="minigamesmenu()">Minigames</button>
+                `
+        }
+
+        //Minigames Menu
+        function minigamesmenu(){
+            document.querySelector(".contentbox").innerHTML =
+                `
+                <h1>Minigames</h1>
+                <button onclick="mastermind()"">Mastermind<button>
+                <button onclick="">Coming Soon ...</button>
+                `
+        }
         
+        //Submenus for different Games
+        //mastermind
+        function mastermind(){
+            document.querySelector(".contentbox").innerHTML =
+                `
+                <h1>Mastermind</h1>
+                <button onclick="window.location.href='./mastermind.html'">Play<button>
+                <button onclick="mastermind_gameguide()">Game Guide</button>
+                `
+        }
+        function mastermind_gameguide(){
+        document.querySelector(".contentbox").innerHTML = 
+                                    `
+                <div class="gameguid_screentext">
+                    <h1>Guide</h1>
+                </div>
+                <div class="gameguid_screentext">   
+                    1. Find a 5 digit number consisting of 1-9. No double numbers.
+                </div>
+                <div class="gameguid_screentext">
+                    2. Enter a 5 digit number into the input line. 
+                </div>
+                <div class="gameguid_screentext">
+                    - The number on the left (in white) shows  how many numbers are correct but in the wrong place 
+                </div>
+                <div class="gameguid_screentext">
+                    - The number on the right (in red) shows how many numbers are correct AND in the right place.
+                </div>
+                <div class="gameguid_screentext">
+                    3. If you don't find/guess the number in 10 tries, you lose.
+                </div>
+                <div class="gameguid_screentext">
+                    4. There is no time limit.
+                </div>
+                <button onclick="mastermind()">Back</button>
+                                    `
+        }
     </script>
 </head> 
 <body> 

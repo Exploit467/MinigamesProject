@@ -156,39 +156,10 @@
         }
         EventLi()
     }
-    function gameguide(){
-        document.querySelector(".contentbox_gameguidebutton").innerHTML = 
-                                    `
-                <div class="gameguid_screentext">
-                    <h1>Guide</h1>
-                </div>
-                <div class="gameguid_screentext">   
-                    1. Find a 5 digit number consisting of 1-9. No double numbers.
-                </div>
-                <div class="gameguid_screentext">
-                    2. Enter a 5 digit number into the input line. 
-                </div>
-                <div class="gameguid_screentext">
-                    - The number on the left (in white) shows  how many numbers are correct but in the wrong place 
-                </div>
-                <div class="gameguid_screentext">
-                    - The number on the right (in red) shows how many numbers are correct AND in the right place.
-                </div>
-                <div class="gameguid_screentext">
-                    3. If you don't find/guess the number in 10 tries, you lose.
-                </div>
-                <div class="gameguid_screentext">
-                    4. There is no time limit.
-                </div>
-                                    `
-    }
     //reset the game
     function reset(){
         document.querySelector(".contentbox").innerHTML =
                     `
-        <div class="contentbox_gameguidebutton">
-            <button onclick="gameguide()">Game Guide</div>
-        </div>
         <div class="error_msg"><a id="error_msg"></a></div>
         <div class="contentbox_lettercontainer_left"><div id="white1"></div></div>
         <div class="contentbox_lettercontainer_left"><div id="white2"></div></div>
