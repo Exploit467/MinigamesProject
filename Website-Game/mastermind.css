@@ -197,6 +197,15 @@ Game
   top: 44%;
 }
 
+.gameguid_screentext {
+  font-size: 3rem;
+  max-width: 1500;
+  position: relative;
+  left: 7%;
+  top: 37%; 
+  line-height: 200%;
+}
+
 .error_msg {
   font-size: 3rem;
   font-family: "Archivo", 'Calibri';
