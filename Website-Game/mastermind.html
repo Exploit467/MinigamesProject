@@ -86,7 +86,7 @@
                         for(k=0;k<5;k++){
                             if(input[i] == input[k]){
                                 if(i != k){
-                                    document.getElementById("error_msg").innerHTML = "You can't type in one letters twice"
+                                    document.getElementById("error_msg").innerHTML = "The same number can`t be entered twice"
                                     c = 1
                                 }
                             }
@@ -98,7 +98,7 @@
                     }
                 }
                 else{
-                    document.getElementById("error_msg").innerHTML = "You need to enter 5 Numbers"
+                    document.getElementById("error_msg").innerHTML = "Enter 5 numbers!"
                 }
             }
         });
@@ -155,10 +155,23 @@
         }
         EventLi()
     }
+    function gameguide(){
+        document.querySelector(".contentbox").innerHTML = 
+                                    `
+                <div class="winningscreen_subscreen">
+                    1. Find a 5 digit number consisting of 1-9. No double numbers! 
+                    2. Enter a 5 digit number into the input line. The number on the left (in white) shows  how many numbers are correct 
+                    but in the wrong place, the number on the right (in red) shows how many numbers are correct AND in the right place.
+                    3. If you don't find/guess the number in 10 tries, you lose.
+                    4. There is no time limit.  
+                    </div>
+                                    `
+    }
     //reset the game
     function reset(){
         document.querySelector(".contentbox").innerHTML =
                     `
+        <button class="contentbox_gameguidebutton" onclick="gameguide()">Game Guide</button>
         <div class="error_msg"><a id="error_msg"></a></div>
         <div class="contentbox_lettercontainer_left"><div id="white1"></div></div>
         <div class="contentbox_lettercontainer_left"><div id="white2"></div></div>
