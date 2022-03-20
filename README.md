@@ -1,2 +1,2 @@
 # MinigamesProject
-kuhles Projekt
+Website mit Minigames
