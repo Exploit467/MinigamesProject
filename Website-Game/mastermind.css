@@ -139,8 +139,8 @@ Game
   border-radius: 10px;
 
   position: relative; 
-  top: -148%;
-  left: 56%;
+  top: -225%;
+  left: 64%;
 }
 
 .playerbox_wordinput{ 
@@ -155,8 +155,8 @@ Game
   z-index: 0;
 
   position: relative;
-  top: -74%;
-  left: 30%;
+  top: -103%;
+  left: 32%;
 }
 
 
