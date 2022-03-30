@@ -1,53 +1,50 @@
 //Script for FindTheSpy Minigame
 //global variables
-var game_len = "german"
+var game_len = "german";
 
-const getLocation = async (game_loc) => {
-    try {
-        const results = await fetch("./FindTheSpy.json");
-        const data = await results.json();
-        if(game_len == "german"){
-            const roles = data.german;
-            const location = roles.map(
-                loc => function(){
-                    if(loc.location = game_loc){
-                        return loc;
-                    }
-                }
-            )
-            return null;
+const getLocation = async () => {
+    const results = await fetch("./FindTheSpy.json");
+    const data = await results.json();
+    if(game_len == "german"){
+        const roles = data.german;
+        for(i=0; i<=roles.length; i++){
+            if(roles[i].location == "Krankenhaus"){
+                console.log(roles[i]);
+                return roles[i];
+            }
         }
-      } catch (err) {
-        console.log(err);
-      }
+    }
+    else{
+        const roles = data.german;
+        return roles[i];
+    }
+}
+const getSpecificRole = async (random) => {
+    return null;
 }
 
-const getSpecificRole = async () => {
-
-}
 //wait until page is loaded
 window.addEventListener("DOMContentLoaded", async function(){
     game()
 })
+
 //global variables
-var players = new Array()
+const players = new Array()
 var role = getRandomRole()
-var location = getLocation()
+const locate = getLocation()
 var print_location = printlocation()
 
 //game
 function getPlayers(){
-    //return the amount of players
-    return 8
+    //create Array with all Players 
 }
 function getRandomRole(){
     var random = Math.floor(Math.random()*8+1);
-    console.log(random)
     if(random == 1){
         return "spy"
     }
     else{
-        return getSpecificRole()
+        return getSpecificRole(random)
     }
 }
 function printlocation(){
@@ -55,7 +52,8 @@ function printlocation(){
         return "????"
     }
     else{
-        return location[0]
+        console.log(locate);
+        return locate
     }
 }
 
