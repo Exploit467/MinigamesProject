@@ -1,0 +1,37 @@
+{
+    "german": [{
+        "location": "Krankenhaus",
+        "role1": "Arzt",
+        "role2": "Krankenschwester",
+        "role3": "Chefarzt",
+        "role4": "Patient",
+        "role5": "Angehöriger eines Patienten",
+        "role6": "Leiter des Krankenhauses",
+        "role7": "Krebspatient",
+        "role8": "Artzhelferin"
+    },
+    {
+        "location": "Raumstation",
+        "role1": "Astronaut",
+        "role2": "Astronaut",
+        "role3": "Astronaut",
+        "role4": "Astronaut",
+        "role5": "Astronaut",
+        "role6": "Astronaut",
+        "role7": "Astronaut",
+        "role8": "Astronaut"
+    },
+    {
+        "location": "Schule",
+        "role1": "Lehrer",
+        "role2": "Sekretärin",
+        "role3": "Schüler",
+        "role4": "Schulleiter",
+        "role5": "Elternteil eines Schülers",
+        "role6": "Referendar",
+        "role7": "Lehrer",
+        "role8": "Schüler"
+    }
+
+    ]
+}

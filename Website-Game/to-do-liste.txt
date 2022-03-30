@@ -1,25 +1,3 @@
-GuessTheWord:
-- was passiert wenn der Timer abläuft?
-
-
-Für Css programmer:
-Verwendete Klassen:
-
-Mainmenu.html:
-gameguid_screentext
-
-Mastermind.html:
-nav
-nav_title
-contentbox
-contentbox_lettercontainer_left
-contentbox_lettercontainer_right
-playerbox_wordinput
-playerbox_wordinput::-webkit-input-placeholder
-winningscreen
-loosingscreen
-winningscreen_subscreen
-winningscreen_subscreen2
-error_msg
-playagainbutton (playagainbutton:hover)
-menubutton  (menubutton:hover)
+Unfertige Games:
+- GuessTheWord
+- FindTheSpy

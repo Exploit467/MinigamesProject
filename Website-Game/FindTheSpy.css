@@ -1,0 +1,14 @@
+/*
+General
+*/
+html {      
+    scroll-behavior: smooth;
+    background-color: lightblue;
+  }
+body,
+  input {
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: "Archivo", 'Calibri';
+    color: var(--black);
+  }
